@@ -1,0 +1,154 @@
+/* === Navbar Base Styles === */
+.custom-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  flex-wrap: wrap;
+}
+
+/* === Left Section === */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.navbar-logo {
+  height: 40px;
+}
+
+.sidebar-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.navbar-search {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 250px;
+  font-size: 14px;
+}
+
+/* === Right Section === */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.icon-container {
+  position: relative;
+}
+
+.icon {
+  font-size: 20px;
+  color: #8B5CF6; /* purple */
+  cursor: pointer;
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: #8B5CF6;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* === Profile Section === */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info {
+  text-align: right;
+}
+
+.profile-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.profile-role {
+  font-size: 12px;
+  color: gray;
+}
+
+/* === Responsive Styles === */
+@media (max-width: 1024px) {
+  .navbar-search {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-search {
+    width: 160px;
+    font-size: 13px;
+  }
+
+  .navbar-right {
+    gap: 12px;
+  }
+
+  .profile-info {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navbar-left,
+  .navbar-right {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .navbar-search {
+    width: 100%;
+  }
+
+  .profile {
+    gap: 6px;
+  }
+
+  .profile-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+
+  .badge {
+    font-size: 9px;
+    padding: 1px 5px;
+  }
+}
