@@ -1,5 +1,5 @@
 import React from 'react'
-import Dash from './dash'
+import Dash from './Dash'
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
 
